@@ -21,11 +21,11 @@ app.use('/api/hrana', hranaRoutes)
 app.use('/api/user', userRoutes)
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect("mongodb+srv://damilicevic:0989588280@webapp.hafaeyx.mongodb.net/?retryWrites=true&w=majority")
     .then(() => {
         // slušanje requestova
-    app.listen(process.env.PORT, () => {
-    console.log('spojen na mongodb & slušanje na portu', process.env.PORT)
+    app.listen(4000, () => {
+    console.log('spojen na mongodb & slušanje na portu', 4000)
 })
     })
     .catch((error) => {
